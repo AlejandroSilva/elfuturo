@@ -3,8 +3,8 @@ services:
 
   nginx:
     build:
-      context: ./
-      dockerfile: docker/nginx.dockerfile
+      context: ./docker
+      dockerfile: nginx.dockerfile
     volumes:
           - ./:/var/www
     working_dir: /var/www
@@ -16,8 +16,8 @@ services:
 
   php7:
     build:
-      context: ./
-      dockerfile: docker/php7.dockerfile
+      context: ./docker
+      dockerfile: php7.dockerfile
     volumes:
       - ./:/var/www
     working_dir: /var/www
