@@ -37,6 +37,7 @@ services:
       dockerfile: nginx.dockerfile
     volumes:
       - ./:/var/www
+      - ./docker/nginx-logs:/var/log/nginx
     working_dir: /var/www
     ports:
       - "8080:80"
