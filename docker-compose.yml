@@ -12,19 +12,6 @@ services:
       - POSTGRES_USER=dbuser
       - POSTGRES_PASSWORD=dbpassword
 
-  nginx:
-    build:
-      context: ./docker
-      dockerfile: nginx.dockerfile
-    volumes:
-      - ./:/var/www
-    working_dir: /var/www
-    ports:
-      - "8080:80"
-    links:
-      - php7
-    command: [nginx-debug, '-g', 'daemon off;']
-
   php7:
     build:
       context: ./docker
@@ -41,3 +28,16 @@ services:
       - DB_DATABASE=miapp
       - DB_USERNAME=dbuser
       - DB_PASSWORD=dbpassword
+
+  nginx:
+    build:
+      context: ./docker
+      dockerfile: nginx.dockerfile
+    volumes:
+      - ./:/var/www
+    working_dir: /var/www
+    ports:
+      - "8080:80"
+    links:
+      - php7
+    command: [nginx-debug, '-g', 'daemon off;']
