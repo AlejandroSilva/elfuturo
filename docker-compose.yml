@@ -5,6 +5,8 @@ services:
     build:
       context: ./docker
       dockerfile: postgres.dockerfile
+    volumes:
+      - ./docker/postgres-data:/var/lib/postgresql/data
     ports:
       - "54320:5432"
     environment:
