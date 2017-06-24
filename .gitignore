@@ -9,4 +9,7 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 .env
-composer.lock
+*.lock
+yarn.lock
+docker/nginx-logs/*
+docker/postgres-data/*
