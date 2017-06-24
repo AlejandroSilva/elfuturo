@@ -10,6 +10,7 @@ Homestead.yaml
 npm-debug.log
 .env
 *.lock
+.DS_Store
 yarn.lock
 docker/nginx-logs/*
 docker/postgres-data/*
