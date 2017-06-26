@@ -23,13 +23,6 @@ services:
     working_dir: /var/www
     links:
       - postgres
-    environment:
-      - DB_CONNECTION=pgsql
-      - DB_PORT=5432
-      - DB_HOST=postgres
-      - DB_DATABASE=miapp
-      - DB_USERNAME=dbuser
-      - DB_PASSWORD=dbpassword
 
   nginx:
     build:
