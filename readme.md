@@ -25,8 +25,11 @@ docker logs -f laravel54_app_1
 
 #### to connect a runing container
 docker exec -i -t [container id] /bin/bash
+
 docker exec -i -t $(docker ps | grep _postgres_  | awk '{print $1}') /bin/bash
+
 docker exec -i -t $(docker ps | grep _php7_  | awk '{print $1}') /bin/bash
+
 docker exec -i -t $(docker ps | grep _nginx_ | awk '{print $1}') /bin/bash
 
 #### to stop, delete, and force a rebuild of the containers
